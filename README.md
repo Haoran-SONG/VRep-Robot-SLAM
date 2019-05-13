@@ -63,7 +63,7 @@ rostopic pub syscommand std_msgs/String "savegeotiff"
 ```
 
 ## 2.3 Ball Tracking
-For tracking the yellow ball, firstly we extract the ball contour by applying the [*Hough Circle Transformation*](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html) to the blurred image. Then a series of velocity commands is calculated based on the cicle center coordinator in the image.
+For tracking the yellow ball, firstly we extract the ball contour by applying the [*Hough Circle Transformation*](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html) to the blurred image. Then a series of velocity commands is calculated based on the cicle center coordinator in the image. Demo is shown [here](https://youtu.be/2p4u3J0AaR8)
 
 ```shell
 rosrun visual_servo follow_ball
