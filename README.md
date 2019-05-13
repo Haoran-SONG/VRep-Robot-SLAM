@@ -37,7 +37,7 @@ roslaunch all.launch
 ```
 The nodes and topic graph could be visualized by rqt, as shown below.
 
-<img src="data/graph.png" width="50%" height="50%" align=center>
+<img src="data/graph.png" width="95%" height="95%" align="center">
 
 
 ## 2. Run sub-tasks
@@ -72,7 +72,7 @@ rosrun visual_servo follow_ball
 ```
 The yellow ball tracking result is shown below.
 
-<img src="data/tracking.png" width="50%" height="50%" align=center>
+<img src="data/tracking.png" width="80%" height="80%" align="center">
 
 ### 2.4 Face Recognition
 The face detection part is implemented by adjusting the [ViCoS Lab ROS packages](https://github.com/vicoslab/vicos_ros) of OpenCV object detection. Here the face detection is based on [Haar feature-based cascade classifiers](https://docs.opencv.org/3.4.1/d7/d8b/tutorial_py_face_detection.html), which is an effective object detection method proposed by Paul Viola in their paper ["Rapid Object Detection using a Boosted Cascade of Simple Features"](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf).
@@ -84,7 +84,7 @@ roslaunch opencv_detector face.launch
 ```
 The face recognition result is shown below.
 
-<img src="data/face_recognization.png" width="50%" height="50%" align=center>
+<img src="data/face_recognization.png" width="80%" height="80%" align="center">
 
 ---
 
