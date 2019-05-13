@@ -1,13 +1,11 @@
 # Mobile Robot SLAM based on V-Rep & ROS
 
 # 0. Prerequisit
-
 - ROS Kinetic on Ubuntu 16.04
 - V-REP_PRO_EDU_V3_5_0_Linux
 
 
 ## 0.1 V-Rep & ROS Interface Instruction
-
 1. Download V-REP_PRO_EDU_V3_5_0_Linux. 
 2. Run ./VRep_folder/vrep.sh 
 3. Add the root path of vrep to the environment variable with name VREP ROOT in the .bashrc file
@@ -15,7 +13,6 @@
 5. After successfully compiled, copy the libv repExtRosInterface.so from /catkin ws/devel/lib/libv to your V-Rep root folder.
 
 ## 0.2 Environment Test
-
 1. Launch ROS
 ```shell
 roscore
@@ -42,7 +39,6 @@ The nodes and topic graph could be visualized by rqt, as shown below.
 
 
 # 2. Run sub-tasks
-
 ## 2.1 Tele-operate by Keyboard
 ```shell
 rosrun teleop_by_keyboard teleop_by_keyboard.py
@@ -89,8 +85,6 @@ The face recognition result is shown below.
 
 <img src="data/face_recognization.png">
 
-
----
 
 ## Author
 - SONG Haoran
