@@ -50,17 +50,24 @@ Here we use the [*Hcetor SLAM*](http://wiki.ros.org/hector_slam) package. The So
 sudo apt-get install ros-indigo-hector-slam
 ```
 
-And then you can test this package by running a rosbag of [Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena](https://github.com/uscrs-art/beohawk-ros/blob/master/hector_slam/Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag)
+Then you can test this package by running a rosbag of [Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena](https://github.com/uscrs-art/beohawk-ros/blob/master/hector_slam/Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag)
 ```shell
 roslaunch hector_slam_launch tutorial.launch
 # cd to the rosbag location
 rosbag play Team_Hector_MappingBox_RoboCup_2011_Rescue_Arena.bag --clock
+# Finally the generated geotiff maps could be saved to the 'hector_slam/hector_geotiff/maps' folder. 
+rostopic pub syscommand std_msgs/String "savegeotiff" 
+
 ```
 
-Finally the generated geotiff maps could be saved to the 'hector_slam/hector_geotiff/maps' folder. 
+Launch the laser scanner mapping.  
+```shell
+# cd to this workspace
+# The camera is switch to false in this launch file to accelerate simulation 
+roslaunch mapping.launch 
 ```
-rostopic pub syscommand std_msgs/String "savegeotiff" 
-```
+The comparison between the mapping result and the true scene is shown below.
+<img src="map/compare.png">
 
 ## 2.3 Ball Tracking
 For tracking the yellow ball, firstly we extract the ball contour by applying the [*Hough Circle Transformation*](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html) to the blurred image. Then a series of velocity commands is calculated based on the cicle center coordinator in the image. Demo is shown [here](https://youtu.be/2p4u3J0AaR8)
