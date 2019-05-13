@@ -60,14 +60,14 @@ rostopic pub syscommand std_msgs/String "savegeotiff"
 
 ```
 
-Launch the laser scanner mapping.  
+For this task, you can directly launch the laser scanner mapping.  
 ```shell
 # cd to this workspace
 # The camera is switch to false in this launch file to accelerate simulation 
 roslaunch mapping.launch 
 ```
 The comparison between the mapping result and the true scene is shown below.
-<img src="map/compare.png">
+<img src="map_compare.png">
 
 ## 2.3 Ball Tracking
 For tracking the yellow ball, firstly we extract the ball contour by applying the [*Hough Circle Transformation*](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html) to the blurred image. Then a series of velocity commands is calculated based on the cicle center coordinator in the image. Demo is shown [here](https://youtu.be/2p4u3J0AaR8)
